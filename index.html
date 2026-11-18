@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Python Academy | تعلم بايثون</title>
+<title>Python Academy | تعلم بايثون من الصفر للاحتراف</title>
 
 <style>
 *{box-sizing:border-box}
@@ -14,6 +13,7 @@ body{
  background:#0b1120;
  color:white;
  line-height:1.8;
+ scroll-behavior: smooth;
 }
 header{
  background:#111c30;
@@ -23,19 +23,25 @@ header{
  align-items:center;
  flex-wrap:wrap;
  gap:12px;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ border-bottom: 1px solid #1e293b;
 }
 .logo{font-size:23px;font-weight:bold;color:#45d6a0}
 nav a{
  color:white;text-decoration:none;
- margin:8px;font-size:15px;
+ margin:0 10px;font-size:15px;
+ transition: color 0.3s;
 }
+nav a:hover{color:#45d6a0}
 .hero{
  text-align:center;
  padding:75px 20px;
  background:linear-gradient(135deg,#142b48,#153b3b);
 }
-.hero h1{font-size:36px}
-.hero p{color:#cbd5e1;font-size:18px}
+.hero h1{font-size:36px; margin-bottom: 10px;}
+.hero p{color:#cbd5e1;font-size:18px; margin-bottom: 20px;}
 .btn{
  display:inline-block;
  background:#22c58b;color:#071b16;
@@ -43,29 +49,38 @@ nav a{
  border-radius:9px;
  text-decoration:none;
  font-weight:bold;
- margin-top:15px;
+ transition: background 0.3s;
 }
+.btn:hover{background:#1ea773}
 .container{max-width:1050px;margin:auto;padding:35px 20px}
-h2{color:#45d6a0}
+h2{color:#45d6a0; border-bottom: 2px solid #1e293b; padding-bottom: 8px; margin-top: 40px;}
 .cards{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
  gap:18px;
+ margin-top: 20px;
 }
 .card{
  background:#162238;
  padding:22px;
  border:1px solid #293b56;
  border-radius:14px;
+ transition: transform 0.3s, border-color 0.3s;
 }
-.card h3{color:#45d6a0}
-.card a{color:#55d6ff;text-decoration:none}
+.card:hover{
+ transform: translateY(-5px);
+ border-color: #45d6a0;
+}
+.card h3{color:#45d6a0; margin-top: 0;}
+.card a{color:#55d6ff;text-decoration:none; font-weight: bold;}
+.card a:hover{text-decoration: underline;}
 .lesson{
  background:#162238;
  padding:25px;
- margin:22px 0;
+ margin:30px 0;
  border-radius:14px;
  border-right:4px solid #45d6a0;
+ box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 pre{
  background:#080d18;
@@ -75,18 +90,26 @@ pre{
  direction:ltr;
  text-align:left;
  color:#7ee7b5;
+ border: 1px solid #1e293b;
+ font-size: 15px;
 }
 .tip{
  background:#24364b;
  padding:14px;
  border-radius:9px;
  color:#b9e6ff;
+ margin-top: 15px;
+ border-left: 4px solid #55d6ff;
 }
+ul{padding-right: 20px;}
+li{margin-bottom: 8px;}
 footer{
  text-align:center;
  padding:25px;
  background:#111c30;
  color:#aaa;
+ border-top: 1px solid #1e293b;
+ margin-top: 50px;
 }
 </style>
 </head>
@@ -97,25 +120,25 @@ footer{
 <div class="logo">🐍 Python Academy</div>
 <nav>
 <a href="#home">الرئيسية</a>
-<a href="#courses">الدروس</a>
-<a href="#about">حول الموقع</a>
+<a href="#courses">فهرس الدروس</a>
+<a href="#about">حول المنصة</a>
 </nav>
 </header>
 
 <section class="hero" id="home">
 <h1>تعلم Python من الصفر إلى الاحتراف 🚀</h1>
-<p>ابدأ رحلتك في عالم البرمجة خطوة بخطوة وباللغة العربية.</p>
+<p>ابدأ رحلتك في عالم البرمجة خطوة بخطوة وباللغة العربية لتصبح قادراً على كتابة الأكواد وحدك.</p>
 <a href="#courses" class="btn">ابدأ التعلم الآن</a>
 </section>
 
 <main class="container" id="courses">
 
-<h2>📚 فهرس الدورة التعليمية</h2>
+<h2>📚 فهرس الدورة التعليمية الشاملة</h2>
 
 <div class="cards">
 <div class="card">
 <h3>📘 الدرس الأول</h3>
-<p>مقدمة عن لغة Python</p>
+<p>مقدمة عن لغة Python وأول برنامج</p>
 <a href="#lesson1">ابدأ الدرس ←</a>
 </div>
 
@@ -130,24 +153,42 @@ footer{
 <p>الشروط If / Else</p>
 <a href="#lesson3">ابدأ الدرس ←</a>
 </div>
+
+<div class="card">
+<h3>📕 الدرس الرابع</h3>
+<p>التعامل مع الأرقام والقيم مثل 123</p>
+<a href="#lesson4">ابدأ الدرس ←</a>
 </div>
 
+<div class="card">
+<h3>📒 الدرس الخامس</h3>
+<p>الحلقات التكرارية Loops</p>
+<a href="#lesson5">ابدأ الدرس ←</a>
+</div>
+
+<div class="card">
+<h3>📔 الدرس السادس</h3>
+<p>الدوال Functions والوظائف</p>
+<a href="#lesson6">ابدأ الدرس ←</a>
+</div>
+</div>
+
+<!-- الدرس الأول -->
 <section class="lesson" id="lesson1">
 <h2>📖 الدرس الأول: مقدمة عن Python</h2>
 <p>
-Python هي لغة برمجة سهلة التعلم وقوية،
-تُستخدم في الذكاء الاصطناعي وتطوير المواقع
-وتحليل البيانات.
+Python هي لغة برمجة عالية المستوى، سهلة التعلم وقوية جداً، تُستخدم في الذكاء الاصطناعي، تطوير المواقع، وتحليل البيانات.
 </p>
 <h3>أول برنامج لك:</h3>
 <pre>print("Hello World!")</pre>
-<p>هذه التعليمة تعرض عبارة Hello World على الشاشة.</p>
-<div class="tip">💡 نصيحة: لا تكتفِ بقراءة الأكواد، حاول كتابتها بنفسك.</div>
+<p>هذه التعليمة البسيطة تطلب من الحاسوب عرض عبارة Hello World على الشاشة.</p>
+<div class="tip">💡 نصيحة: لا تكتفِ بقراءة الأكواد، حاول كتابتها بنفسك وتجربتها.</div>
 </section>
 
+<!-- الدرس الثاني -->
 <section class="lesson" id="lesson2">
 <h2>📖 الدرس الثاني: المتغيرات وأنواع البيانات</h2>
-<p>المتغير هو مكان نخزن فيه المعلومات.</p>
+<p>المتغير يشبه "الصندوق" الذي نخزن فيه المعلومات لنستخدمها لاحقاً في البرنامج.</p>
 <pre>
 name = "Ahmed"
 age = 15
@@ -157,27 +198,69 @@ is_student = True
 print(name)
 print(age)
 </pre>
-<h3>أنواع البيانات:</h3>
+<h3>أنواع البيانات الأساسية:</h3>
 <ul>
-<li>str : النصوص</li>
-<li>int : الأعداد الصحيحة</li>
-<li>float : الأعداد العشرية</li>
-<li>bool : القيم المنطقية</li>
+<li><strong>str:</strong> للنصوص (مثل "Ahmed")</li>
+<li><strong>int:</strong> للأعداد الصحيحة (مثل 15)</li>
+<li><strong>float:</strong> للأعداد العشرية (مثل 20.5)</li>
+<li><strong>bool:</strong> للقيم المنطقية (True أو False)</li>
 </ul>
 </section>
 
+<!-- الدرس الثالث -->
 <section class="lesson" id="lesson3">
 <h2>📖 الدرس الثالث: الشروط If / Else</h2>
-<p>نستخدم الشروط لاتخاذ القرارات داخل البرنامج.</p>
+<p>نستخدم الشروط لاتخاذ القرارات داخل البرنامج بناءً على المعطيات.</p>
 <pre>
 age = 18
 
 if age >= 18:
-    print("Adult")
+    print("أنت بالغ، يمكنك الدخول.")
 else:
-    print("Young")
+    print("عذراً، أنت صغير السن.")
 </pre>
-<p>إذا تحقق الشرط ينفذ البرنامج تعليمات if، وإلا ينفذ else.</p>
+<p>إذا تحقق الشرط (`if`) ينفذ البرنامج تعليمة معينة، وإلا (`else`) ينفذ تعليمة بديلة.</p>
+</section>
+
+<!-- الدرس الرابع -->
+<section class="lesson" id="lesson4">
+<h2>📖 الدرس الرابع: التعامل مع الأرقام (مثال: 123)</h2>
+<p>في لغة بايثون، يمكنك التعامل مع الأرقام بشكل مباشر ومريح في العمليات الحسابية بدون الحاجة لعلامات تنصيص:</p>
+<pre>
+number = 123
+result = number + 7
+
+print(number)
+print(result)  # الناتج سيكون 130
+</pre>
+<div class="tip">💡 نصيحة: الأרגام الحسابية لا توضع بين علامات تنصيص `""`، لأن وضعها داخل علامات تنصيص يجعلها تعتبر "نصوصاً" (Strings) وليست أعداداً قابلة للجمع أو الطرح.</div>
+</section>
+
+<!-- الدرس الخامس -->
+<section class="lesson" id="lesson5">
+<h2>📖 الدرس الخامس: الحلقات التكرارية Loops</h2>
+<p>بدلاً من تكرار كتابة نفس الكود عشرات المرات، نستخدم الحلقات لتكرار تنفيذ الأوامر بكفاءة.</p>
+<pre>
+# طباعة الأرقام من 1 إلى 5
+for i in range(1, 6):
+    print(i)
+</pre>
+<p>تساعدنا الحلقات (مثل `for` و `while`) على معالجة البيانات الكبيرة وتوفير الوقت والجهد.</p>
+</section>
+
+<!-- الدرس السادس -->
+<section class="lesson" id="lesson6">
+<h2>📖 الدرس السادس: الدوال Functions</h2>
+<p>الدالة هي مجموعة من الأوامر التي تقوم بمهمة محددة، ويمكنك إعادة استخدامها مراراً وتكراراً في برنامجك.</p>
+<pre>
+def greet(user_name):
+    print("مرحباً بك يا " + user_name)
+
+# استدعاء الدالة
+greet("أحمد")
+greet("سارة")
+</pre>
+<div class="tip">🎯 تهانينا! باتقانك لهذه الأساسيات، أصبحت تمتلك القدرة على التفكير كبرمجي وكتابة برامجك الخاصة بكفاءة.</div>
 </section>
 
 </main>
@@ -185,15 +268,12 @@ else:
 <section class="container" id="about">
 <h2>🎯 حول هذه الدورة</h2>
 <p>
-هذه المنصة مخصصة لكل من يريد تعلم البرمجة
-باستخدام Python من البداية، بطريقة مبسطة
-ومع أمثلة تطبيقية.
+هذه المنصة مخصصة لكل مبتدئ يريد دخول عالم البرمجة من بوابة لغة بايثون الواسعة. تم تصميم الدروس بعناية لتنتقل بك من الفهم البسيط إلى القدرة على الابتكار وكتابة الأكواد البرمجية باستقلالية تامة.
 </p>
 </section>
 
 <footer>
-<p>🐍 Python Academy</p>
-<p>جميع الحقوق محفوظة © 2026</p>
+<p>🐍 Python Academy - جميع الحقوق محفوظة © 2026</p>
 </footer>
 
 </body>
