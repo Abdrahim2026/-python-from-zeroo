@@ -1,2 +1,7 @@
-# -python-from-zeroo
-A complete guide to learn Python from scratch to professional level
+
+# دورة تعلم لغة بايثون من الصفر إلى الاحتراف 🚀
+
+مرحباً بك في هذا الدليل الشامل لتعلم البرمجة بلغة Python.
+
+## الدرس الأول: مقدمة عن لغة بايثون
+بايثون هي لغة برمجة سهلة التعلم وقوية جداً...
