@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Academy | تعلم بايثون</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#0b1120;
+ color:white;
+ line-height:1.8;
+}
+header{
+ background:#111c30;
+ padding:18px 7%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap;
+ gap:12px;
+}
+.logo{font-size:23px;font-weight:bold;color:#45d6a0}
+nav a{
+ color:white;text-decoration:none;
+ margin:8px;font-size:15px;
+}
+.hero{
+ text-align:center;
+ padding:75px 20px;
+ background:linear-gradient(135deg,#142b48,#153b3b);
+}
+.hero h1{font-size:36px}
+.hero p{color:#cbd5e1;font-size:18px}
+.btn{
+ display:inline-block;
+ background:#22c58b;color:#071b16;
+ padding:12px 25px;
+ border-radius:9px;
+ text-decoration:none;
+ font-weight:bold;
+ margin-top:15px;
+}
+.container{max-width:1050px;margin:auto;padding:35px 20px}
+h2{color:#45d6a0}
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:18px;
+}
+.card{
+ background:#162238;
+ padding:22px;
+ border:1px solid #293b56;
+ border-radius:14px;
+}
+.card h3{color:#45d6a0}
+.card a{color:#55d6ff;text-decoration:none}
+.lesson{
+ background:#162238;
+ padding:25px;
+ margin:22px 0;
+ border-radius:14px;
+ border-right:4px solid #45d6a0;
+}
+pre{
+ background:#080d18;
+ padding:16px;
+ border-radius:9px;
+ overflow-x:auto;
+ direction:ltr;
+ text-align:left;
+ color:#7ee7b5;
+}
+.tip{
+ background:#24364b;
+ padding:14px;
+ border-radius:9px;
+ color:#b9e6ff;
+}
+footer{
+ text-align:center;
+ padding:25px;
+ background:#111c30;
+ color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🐍 Python Academy</div>
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#courses">الدروس</a>
+<a href="#about">حول الموقع</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>تعلم Python من الصفر إلى الاحتراف 🚀</h1>
+<p>ابدأ رحلتك في عالم البرمجة خطوة بخطوة وباللغة العربية.</p>
+<a href="#courses" class="btn">ابدأ التعلم الآن</a>
+</section>
+
+<main class="container" id="courses">
+
+<h2>📚 فهرس الدورة التعليمية</h2>
+
+<div class="cards">
+<div class="card">
+<h3>📘 الدرس الأول</h3>
+<p>مقدمة عن لغة Python</p>
+<a href="#lesson1">ابدأ الدرس ←</a>
+</div>
+
+<div class="card">
+<h3>📗 الدرس الثاني</h3>
+<p>المتغيرات وأنواع البيانات</p>
+<a href="#lesson2">ابدأ الدرس ←</a>
+</div>
+
+<div class="card">
+<h3>📙 الدرس الثالث</h3>
+<p>الشروط If / Else</p>
+<a href="#lesson3">ابدأ الدرس ←</a>
+</div>
+</div>
+
+<section class="lesson" id="lesson1">
+<h2>📖 الدرس الأول: مقدمة عن Python</h2>
+<p>
+Python هي لغة برمجة سهلة التعلم وقوية،
+تُستخدم في الذكاء الاصطناعي وتطوير المواقع
+وتحليل البيانات.
+</p>
+<h3>أول برنامج لك:</h3>
+<pre>print("Hello World!")</pre>
+<p>هذه التعليمة تعرض عبارة Hello World على الشاشة.</p>
+<div class="tip">💡 نصيحة: لا تكتفِ بقراءة الأكواد، حاول كتابتها بنفسك.</div>
+</section>
+
+<section class="lesson" id="lesson2">
+<h2>📖 الدرس الثاني: المتغيرات وأنواع البيانات</h2>
+<p>المتغير هو مكان نخزن فيه المعلومات.</p>
+<pre>
+name = "Ahmed"
+age = 15
+price = 20.5
+is_student = True
+
+print(name)
+print(age)
+</pre>
+<h3>أنواع البيانات:</h3>
+<ul>
+<li>str : النصوص</li>
+<li>int : الأعداد الصحيحة</li>
+<li>float : الأعداد العشرية</li>
+<li>bool : القيم المنطقية</li>
+</ul>
+</section>
+
+<section class="lesson" id="lesson3">
+<h2>📖 الدرس الثالث: الشروط If / Else</h2>
+<p>نستخدم الشروط لاتخاذ القرارات داخل البرنامج.</p>
+<pre>
+age = 18
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Young")
+</pre>
+<p>إذا تحقق الشرط ينفذ البرنامج تعليمات if، وإلا ينفذ else.</p>
+</section>
+
+</main>
+
+<section class="container" id="about">
+<h2>🎯 حول هذه الدورة</h2>
+<p>
+هذه المنصة مخصصة لكل من يريد تعلم البرمجة
+باستخدام Python من البداية، بطريقة مبسطة
+ومع أمثلة تطبيقية.
+</p>
+</section>
+
+<footer>
+<p>🐍 Python Academy</p>
+<p>جميع الحقوق محفوظة © 2026</p>
+</footer>
+
+</body>
+</html>
